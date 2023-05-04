@@ -1,4 +1,4 @@
-package Greedy;
+package Algorithms.ThisIsCodingTest.Greedy;
 
 import java.util.*;
 public class Greedy2 {
