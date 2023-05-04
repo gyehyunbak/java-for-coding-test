@@ -1,4 +1,4 @@
-package ThisIsJava.ch02.sec01;
+package ThisIsJava.ch02;
 
 public class IntegerLiteralExample {
     public static void main(String[] args) {
