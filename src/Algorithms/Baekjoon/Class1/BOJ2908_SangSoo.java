@@ -9,14 +9,13 @@ public class BOJ2908_SangSoo {
         String strB = reverse(sc.next());
         int a = Integer.parseInt(strA);
         int b = Integer.parseInt(strB);
-        if(a>b) System.out.println(a);
-        else System.out.println(b);
+        System.out.println(Math.max(a, b));
     }
 
     public static String reverse(String str) {
         String result = "";
         for(int i=str.length()-1; i>=0; i--) {
-            result += str.charAt(i);
+            result = result + str.charAt(i);
         }
         return result;
     }
