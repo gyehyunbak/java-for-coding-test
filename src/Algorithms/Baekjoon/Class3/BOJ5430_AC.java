@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
-import java.util.Iterator;
 import java.util.StringTokenizer;
 
 public class BOJ5430_AC {
@@ -73,7 +72,7 @@ public class BOJ5430_AC {
 
     public static void D(ArrayDeque<Integer> deq) {
         if (deq.isEmpty()) {
-            error = true;
+            error = true; // error 나면 반복문 풀게 나중에 수정
         } else {
             // isRight 변수를 통해 어느 방향을 삭제할 지 결정한다.
             if (!isRight) {
