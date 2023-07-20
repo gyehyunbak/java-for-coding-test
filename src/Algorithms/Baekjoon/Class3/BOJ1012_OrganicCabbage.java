@@ -3,6 +3,7 @@ package Algorithms.Baekjoon.Class3;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class BOJ1012_OrganicCabbage {
@@ -35,16 +36,18 @@ public class BOJ1012_OrganicCabbage {
     }
 
     public static int getWormNumber(int k) {
+        System.out.println(Arrays.toString(parent));
         // 각 배추가 다른 배추와 근접한지 조사하고, 근접한 경우 같은 그룹넘버를 갖게 한다.
         for(int i=0; i<k; i++) {
             for(int j=i+1; j<k; j++) {
                 if(isAdjacent(cabbages[i], cabbages[j])) {
                     unionParent(i, j);
+                    System.out.println(Arrays.toString(parent));
                 }
             }
         }
 
-        // 서로 다른 원소의 종류가 몇개인지 파악한다.
+        // 자기 자신을 가리키는 부모노드의 개수가 곧 서로 다른 그룹의 개수이다.
         int count = 0;
         for (int i = 0; i < k; i++) {
             if (parent[i] == i) {
